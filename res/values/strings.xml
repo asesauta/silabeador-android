@@ -2,4 +2,5 @@
 <resources>
     <string name="hello">Hello World, Silabeador!</string>
     <string name="app_name">Silabeador</string>
+    <string name="boton">silabear</string>
 </resources>
