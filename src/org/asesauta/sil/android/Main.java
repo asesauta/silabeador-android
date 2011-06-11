@@ -45,9 +45,9 @@ public class Main extends Activity implements OnClickListener {
 		Silabeador silabeador = new Silabeador();
 		List<String> silabas = silabeador.silabear(input.getText().toString().trim());
 		String tonica = silabas.get(silabeador.tonica(silabas));
-		TextView outputSilabas = (TextView) findViewById(R.id.TextView02);
+		TextView outputSilabas = (TextView) findViewById(R.id.TextView01);
 		outputSilabas.setText(SILABAS+formatSilabas(silabas));
-		TextView outputTonica = (TextView) findViewById(R.id.TextView04);
+		TextView outputTonica = (TextView) findViewById(R.id.TextView02);
 		outputTonica.setText(TONICA+tonica);
 	}
 	
