@@ -37,7 +37,7 @@ public class Main extends Activity implements OnClickListener {
         button.setOnClickListener(this);
         
         if (savedInstanceState!=null) {
-    		Log.i(TAG, "recuperando la instancia");
+    		Log.d(TAG, "recuperando la instancia");
     		EditText input = (EditText) findViewById(R.id.EditText01);
     		palabra = savedInstanceState.getString("palabra");
     		tonica = savedInstanceState.getString("tonica");
@@ -51,7 +51,7 @@ public class Main extends Activity implements OnClickListener {
 	protected void onSaveInstanceState(Bundle outState)
 	{
 		super.onSaveInstanceState(outState);
-		Log.i(TAG, "guardando el estado");
+		Log.d(TAG, "guardando el estado");
 		outState.putString("palabra", palabra);
 		outState.putStringArrayList("silabas", silabas);
 		outState.putString("tonica", tonica);
@@ -60,7 +60,7 @@ public class Main extends Activity implements OnClickListener {
 	@Override
 	public void onClick(View v)
 	{
-		Log.i(TAG, "click");
+		Log.d(TAG, "click");
 		EditText input = (EditText) findViewById(R.id.EditText01);
 		Silabeador silabeador = new Silabeador();
 		palabra = input.getText().toString();
