@@ -7,7 +7,6 @@ import org.asesauta.anapalabra.Silabeador;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -16,7 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class Main extends Activity implements OnClickListener {
-    private final String TAG = "silabas";
+    //private final String TAG = "silabas";
     private final String SILABAS = "sílabas: ";
     private final String TONICA = "sílaba tónica: ";
     private String palabra;
@@ -37,7 +36,7 @@ public class Main extends Activity implements OnClickListener {
         button.setOnClickListener(this);
         
         if (savedInstanceState!=null) {
-    		Log.d(TAG, "recuperando la instancia");
+    		//Log.d(TAG, "recuperando la instancia");
     		EditText input = (EditText) findViewById(R.id.EditText01);
     		palabra = savedInstanceState.getString("palabra");
     		tonica = savedInstanceState.getString("tonica");
@@ -51,7 +50,6 @@ public class Main extends Activity implements OnClickListener {
 	protected void onSaveInstanceState(Bundle outState)
 	{
 		super.onSaveInstanceState(outState);
-		Log.d(TAG, "guardando el estado");
 		outState.putString("palabra", palabra);
 		outState.putStringArrayList("silabas", silabas);
 		outState.putString("tonica", tonica);
@@ -60,7 +58,7 @@ public class Main extends Activity implements OnClickListener {
 	@Override
 	public void onClick(View v)
 	{
-		Log.d(TAG, "click");
+		//Log.d(TAG, "click");
 		EditText input = (EditText) findViewById(R.id.EditText01);
 		Silabeador silabeador = new Silabeador();
 		palabra = input.getText().toString();
